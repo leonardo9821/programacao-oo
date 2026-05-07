@@ -1,0 +1,11 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Dart: estudo-dirigido-1.2",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/Questao01/main.dart"
+        }
+    ]
+}
