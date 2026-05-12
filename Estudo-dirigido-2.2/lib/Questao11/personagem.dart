@@ -8,13 +8,13 @@
 //Um personagem está vivo quando sua vida é maior que zero. v
 //A classe Personagem também deve obrigar suas classes filhas a implementarem uma forma própria de exibir o status do personagem.v
 abstract class Personagem {
-  String nome;
+  String nome; //privatizar atributos
   int vida;
   int nivel;
 
   Personagem(this.nome, this.vida, this.nivel) {
     if (nome.isEmpty) {
-      throw Exception('Nome não pode ser vazio');
+      throw Exception('Nome não pode ser vazio'); //substituir por print + retunr
     }
 
     if (vida < 0) {
@@ -25,6 +25,8 @@ abstract class Personagem {
       throw Exception('Nivel deve ser maior ou igual a 1');
     }
   }
+
+  //faltam getter e setters
 
   void exibirStatus();
 
@@ -59,8 +61,7 @@ abstract class Atacavel {
 abstract class Combatente extends Personagem implements Atacavel {
   int forca;
 
-  Combatente(String nome, int vida, int nivel, this.forca)
-    : super(nome, vida, nivel);
+  Combatente(String nome, int vida, int nivel, this.forca): super(nome, vida, nivel);
 
   @override
   void atacar(Personagem alvo) {
@@ -78,7 +79,7 @@ abstract class Combatente extends Personagem implements Atacavel {
 //Além disso, o guerreiro deve possuir um ataque pesado, que causa o dobro da força como dano. v
 //Ao exibir seu status, além das informações comuns de personagem, também deve mostrar sua armadura.v
 class Guerreiro extends Combatente {
-  String armadura;
+  String armadura; 
 
   Guerreiro(String nome, int vida, int nivel, int forca, this.armadura)
     : super(nome, vida, nivel, forca);
@@ -117,7 +118,7 @@ class Guerreiro extends Combatente {
 //Caso não tenha flechas, deve ser exibida uma mensagem informando que o arqueiro não pode atacar.v
 //Ao exibir seu status, além das informações comuns de personagem, também deve mostrar a quantidade de flechas.v
 class Arqueiro extends Combatente {
-  int qtdFlechas;
+  int qtdFlechas; //privatizar tudo (minha visão, privatizar e fazer getter e setter em tudo)
 
   Arqueiro(String nome, int vida, int nivel, int forca, this.qtdFlechas)
     : super(nome, vida, nivel, forca);
