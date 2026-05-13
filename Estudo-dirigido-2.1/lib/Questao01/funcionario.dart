@@ -1,6 +1,6 @@
 class Funcionario {
   String nome;
-  double salario;
+  double salario;//privatizar
   
   Funcionario(this.nome, this.salario);
   void exibirDados() {
@@ -9,13 +9,4 @@ class Funcionario {
   }
 }
 
-class Gerente extends Funcionario {
-  String setor;
-  Gerente(String nome, double salario, this.setor) : super(nome, salario);
 
-  @override
-  void exibirDados() {
-    super.exibirDados();
-    print('Setor: $setor');
-  }
-}

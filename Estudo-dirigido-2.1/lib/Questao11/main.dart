@@ -1,47 +1,21 @@
-import 'personagem.dart';
-void main() {
+import 'guerreiro.dart';
+import 'arqueiro.dart';
+import 'mago.dart';
+import 'goblin.dart';
+import 'dragao.dart';
 
+void main() {
   // Criando personagens
 
-  var guerreiro = Guerreiro(
-    'Thoran',
-    100,
-    5,
-    20,
-    'Aço',
-  );
+  var guerreiro = Guerreiro('Thoran', 100, 5, 20, 'Aço');
 
-  var arqueiro = Arqueiro(
-    'Lia',
-    80,
-    4,
-    15,
-    5,
-  );
+  var arqueiro = Arqueiro('Lia', 80, 4, 15, 5);
 
-  var mago = Mago(
-    'Merlin',
-    70,
-    6,
-    18,
-    30,
-  );
+  var mago = Mago('Merlin', 70, 6, 18, 30);
 
-  var goblin = Globin(
-    'Gob',
-    50,
-    2,
-    100,
-    30,
-  );
+  var goblin = Globin('Gob', 50, 2, 100, 30);
 
-  var dragao = Dragao(
-    'Ignis',
-    300,
-    10,
-    1000,
-    50,
-  );
+  var dragao = Dragao('Ignis', 300, 10, 1000, 50);
 
   // Ações
 

@@ -1,4 +1,4 @@
-import 'funcionario.dart';
+import 'Gerente.dart';
 
 
 

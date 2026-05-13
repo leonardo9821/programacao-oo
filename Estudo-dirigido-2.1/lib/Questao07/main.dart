@@ -1,4 +1,6 @@
-import 'animal.dart';
+import 'cachorro.dart';
+import 'gato.dart';
+import 'passaro.dart';
 
 void main() {
   var cachorro = Cachorro("Rex");
