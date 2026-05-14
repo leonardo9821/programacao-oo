@@ -1,6 +1,6 @@
 //Crie uma classe ContaBancaria com os atributos titular e saldo, além dos métodos depositar(double valor), sacar(double valor) e exibirSaldo().
 
-class ContaBancaria {
+class ContaBancaria{
   String titular;
   double _saldo = 0.0;
 
@@ -37,6 +37,11 @@ class ContaBancaria {
       _saldo = novoSaldo;
     }
   }
+
+  @override
+  String toString() {
+    return 'Titular: $titular | Saldo: R\$ ${saldo.toStringAsFixed(2)}';
+  }
 }
 
 //Depois, crie uma interface chamada Rentavel, com o método aplicarRendimento().
@@ -57,6 +62,12 @@ class ContaPoupanca extends ContaBancaria  implements Rentavel{
     print("Rendimento de 1% aplicado.");
   }
 }
+
+
+
+
+
+
 //Crie também a classe ContaCorrente, que herda de ContaBancaria e implementa Rentavel.
 //A conta corrente deve possuir taxa de rendimento de 5%. No método aplicarRendimento(), aumente o saldo conforme a taxa da conta.
 
@@ -69,5 +80,17 @@ class ContaCorrente extends ContaBancaria implements Rentavel{
     saldo += saldo * taxaRendimento;
 
     print("Rendimento de 5% aplicado.");
+  }
+}
+
+class ContaInvestimento extends ContaBancaria implements Rentavel{
+  double taxaRendimento = 0.08;
+
+  ContaInvestimento(String titular) : super(titular);
+
+  void aplicarRendimento() {
+    saldo += saldo * taxaRendimento;
+
+    print("Rendimento de 8% aplicado.");
   }
 }
