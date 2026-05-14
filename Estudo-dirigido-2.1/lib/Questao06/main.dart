@@ -1,4 +1,4 @@
-import 'Ingresso.dart';
+import 'IngressoVip.dart';
 
 
 void main() {
