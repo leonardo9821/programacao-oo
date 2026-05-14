@@ -1,5 +1,8 @@
-import 'personagem.dart';
-
+import 'Guerreiro.dart';
+import 'arqueiro.dart';
+import 'mago.dart';
+import 'globin.dart';
+import 'dragao.dart';
 //Programa principal
 //No programa principal, crie pelo menos um objeto de cada uma das seguintes classes: Guerreiro, Arqueiro, Mago, Goblin e Dragao.
 //Use os seguintes personagens:

@@ -14,43 +14,8 @@ abstract class Animal {
   }
 }
 
-class Cachorro extends Animal {
-  Cachorro(String nome) : super(nome);
 
-  @override
-  void emitirSom() {
-    super.emitirSom();
-    print('$nome lati: au au');
-  }
-}
 
-class Gato extends Animal {
-  Gato(String nome) : super(nome);
 
-  @override
-  void emitirSom() {
-    super.emitirSom();
-    print('$nome mia: miau');
-  }
-}
 
-class Passaro extends Animal {
-  Passaro(String nome) : super(nome);
 
-  @override
-  void emitirSom() {
-    super.emitirSom();
-    print('$nome pia : piu piu');
-  }
-}
-
-//Crie também uma nova classe filha chamada Vaca, que herda de Animal e sobrescreve emitir Som() com a mensagem “muuu”. 
-class Vaca extends Animal{
-  Vaca(String nome) : super(nome);
-
-  @override
-  void emitirSom() {
-    super.emitirSom();
-    print('$nome mugi: Muuu');
-  }
-}

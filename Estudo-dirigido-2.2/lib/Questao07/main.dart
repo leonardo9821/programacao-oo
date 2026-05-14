@@ -1,4 +1,7 @@
-import 'animal.dart';
+import 'cachorro.dart';
+import 'gato.dart';
+import 'passaro.dart';
+import 'vaca.dart';
 //No main() crie um objeto de cada animal e mande todos emitirem som.
 
 void main() {

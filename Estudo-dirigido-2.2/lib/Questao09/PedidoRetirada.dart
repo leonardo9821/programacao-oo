@@ -1,15 +1,4 @@
-//Crie uma classe abstrata Pedido com os atributos codigo e valorTotal. V
-//A classe deve possuir construtor e declarar o método abstrato exibirPedido().V
-
-abstract class Pedido {
-  final int codigo;
-  final double valorTotal;
-
-  Pedido(this.codigo, this.valorTotal);
-
-  void exibirPedido();
-}
-
+import 'pedido.dart';
 
 //Crie também uma nova classe filha chamada PedidoRetirada, que herda de Pedido e adiciona o atributo nomeCliente.
 //Sobrescreva exibirPedido() para mostrar código, valor total e nome do cliente que fará a retirada.

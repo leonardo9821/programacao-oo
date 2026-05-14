@@ -1,4 +1,5 @@
-import 'pessoa.dart';
+import 'Aluno.dart';
+import 'professor.dart';
 
 //No main(), crie um aluno e um professor. Chame exibirDados() para os dois objetos.
 

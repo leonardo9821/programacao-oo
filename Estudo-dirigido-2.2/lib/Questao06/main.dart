@@ -1,4 +1,5 @@
-import 'Ingresso.dart';
+import 'IngressoVip.dart';
+import 'IngressoPromocional.dart';
 
 //No main(), crie um ingresso VIP e um ingresso promocional. Mostre o valor final de cada um.
 

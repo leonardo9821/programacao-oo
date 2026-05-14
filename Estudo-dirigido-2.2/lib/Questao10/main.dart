@@ -1,4 +1,5 @@
-import 'dispositivo.dart';
+import 'SmarthPhone.dart';
+import 'Notebook.dart';
 
 //No main(), crie um smartphone e um notebook. Chame ligar() e desligar() para os dois objetos.
 

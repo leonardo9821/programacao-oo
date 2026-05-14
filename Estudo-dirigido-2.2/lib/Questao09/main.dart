@@ -1,4 +1,5 @@
-import 'pedido.dart';
+import 'PedidoDelivery.dart';
+import 'PedidoRetirada.dart';
 //No main(), crie um pedido delivery e um pedido para retirada. Exiba os dados dos dois pedidos.
 void main() {
   var pedidoDelivery =
