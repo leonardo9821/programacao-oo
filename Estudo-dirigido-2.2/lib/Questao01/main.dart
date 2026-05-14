@@ -1,4 +1,6 @@
 import 'funcionario.dart';
+import 'funcionarioComun.dart';
+
 
 void main() {
   Funcionario funcionario = FuncionarioComum('João', 2500.00);

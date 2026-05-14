@@ -1,12 +1,4 @@
-abstract class Funcionario {
-  String nome;
-  double salario;
-  Funcionario(this.nome, this.salario);
-  void exibirDados();
-}
-
-
-
+import 'funcionario.dart';
 class Gerente extends Funcionario {
   String setor;
   Gerente(String nome, double salario, this.setor) : super(nome, salario);

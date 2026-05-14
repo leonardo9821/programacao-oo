@@ -1,4 +1,5 @@
 import 'produto.dart';
+import 'produtoPerecivel.dart';
 
 void main() {
 ProdutoPerecivel produto = ProdutoPerecivel('Iogurte', 5.99, '10/06/2026');
