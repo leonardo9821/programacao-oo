@@ -49,39 +49,13 @@ abstract class Rentavel {
   void aplicarRendimento();
 }
 
-//Crie a classe ContaPoupanca, que herda de ContaBancaria e implementa Rentavel.
-//A conta poupança deve possuir taxa de rendimento de 1%.
-class ContaPoupanca extends ContaBancaria  implements Rentavel{
-  double taxaRendimento = 0.01;
-
-  ContaPoupanca(String titular) : super(titular);
-
-  void aplicarRendimento() {
-    saldo += saldo * taxaRendimento;
-
-    print("Rendimento de 1% aplicado.");
-  }
-}
 
 
 
 
 
 
-//Crie também a classe ContaCorrente, que herda de ContaBancaria e implementa Rentavel.
-//A conta corrente deve possuir taxa de rendimento de 5%. No método aplicarRendimento(), aumente o saldo conforme a taxa da conta.
 
-class ContaCorrente extends ContaBancaria implements Rentavel{
-  double taxaRendimento = 0.05;
-
-  ContaCorrente(String titular) : super(titular);
-
-  void aplicarRendimento() {
-    saldo += saldo * taxaRendimento;
-
-    print("Rendimento de 5% aplicado.");
-  }
-}
 
 class ContaInvestimento extends ContaBancaria implements Rentavel{
   double taxaRendimento = 0.08;

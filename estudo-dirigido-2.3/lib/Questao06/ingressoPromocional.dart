@@ -15,13 +15,9 @@ class IngressoPromocional extends Ingresso implements Calculavel {
     return valor - desconto;
   }
 
-  @override
-  void exibirResumo() {
-    super.exibirResumo();
-    print('Desconto: R\$ ${desconto.toStringAsFixed(2)}');
-    print('Valor Final: R\$ ${valorFinal().toStringAsFixed(2)}');
-  }
-
-  @override
   
+  @override
+  String toString() {
+    return 'Evento: $evento ,Valor do ingresso $valor,Desconto: R\$ ${desconto.toStringAsFixed(2)},Valor Final: R\$ ${valorFinal().toStringAsFixed(2)}';
+  }
 }

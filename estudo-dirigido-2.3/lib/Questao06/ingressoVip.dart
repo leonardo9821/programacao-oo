@@ -11,10 +11,9 @@ class IngressoVip extends Ingresso implements Calculavel {
     return valor + valorAdicional;
   }
 
+
   @override
-  void exibirResumo() {
-    super.exibirResumo();
-    print('Valor adicional: $valorAdicional');
-    print('Valor Final: ${valorFinal()}');
+  String toString() {
+    return 'Evento: $evento ,Valor do ingresso $valor,Valor adicional: $valorAdicional,Valor Final: ${valorFinal()}';
   }
 }
