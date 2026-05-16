@@ -3,7 +3,7 @@ import 'ContaBancaria.dart';
 class ContaPoupanca extends ContaBancaria  implements Rentavel{
   double taxaRendimento = 0.01;
 
-  ContaPoupanca(String titular) : super(titular);
+  ContaPoupanca(String titular, String tipoConta, double _saldo) : super(titular, tipoConta, _saldo);
 
   void aplicarRendimento() {
     saldo += saldo * taxaRendimento;

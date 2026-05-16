@@ -1,10 +1,11 @@
-class ContaBancaria{
+class ContaBancaria {
   String titular;
   double _saldo = 0.0;
+  String  tipoConta;
 
-  ContaBancaria(this.titular);
+  ContaBancaria(this.titular,this.tipoConta,this._saldo);
 
-  void depositar(double valor) {
+  void depositar(double valor ) {
     if (valor > 0) {
       _saldo += valor;
       print("Depósito de R\$ $valor realizado com sucesso!");
@@ -22,10 +23,6 @@ class ContaBancaria{
     }
   }
 
-  void exibirSaldo() {
-    print("Titular: $titular | Saldo Atual: R\$ ${_saldo.toStringAsFixed(2)}");
-  }
-
   double get saldo => _saldo;
 
   // Setter protegido
@@ -35,32 +32,19 @@ class ContaBancaria{
     }
   }
 
+  void exibirSaldo() {
+    print("Titular: $titular | Saldo Atual: R\$ ${_saldo.toStringAsFixed(2)}");
+  }
+   
+  
+  
   @override
   String toString() {
-    return 'Titular: $titular | Saldo: R\$ ${saldo.toStringAsFixed(2)}';
+    return 'Titular: $titular || Tipo da conta: $tipoConta | Saldo: R\$ ${saldo.toStringAsFixed(2)}  ';
   }
+
 }
 
 abstract class Rentavel {
   void aplicarRendimento();
-}
-
-
-
-
-
-
-
-
-
-class ContaInvestimento extends ContaBancaria implements Rentavel{
-  double taxaRendimento = 0.08;
-
-  ContaInvestimento(String titular) : super(titular);
-
-  void aplicarRendimento() {
-    saldo += saldo * taxaRendimento;
-
-    print("Rendimento de 8% aplicado.");
-  }
 }
