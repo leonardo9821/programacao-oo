@@ -39,22 +39,20 @@ void main() {
 
   print('\n=== Atacando ===');
   for (var c in combatentes.obterItens()) {
-    c.atacar(goblin); 
+    c.atacar(goblin);
   }
 
   print('\n=== Magia ===');
   for (var m in magos.obterItens()) {
-    m.magia(dragao); 
+    m.magia(dragao);
   }
 
   print('\n=== Fogo ===');
   for (var f in flamejante.obterItens()) {
-    f.chamas(guerreiro); 
+    f.chamas(guerreiro);
   }
 
   // Estado final
   print('\n=== Estado final ===');
   personagem.imprimirItens(); // toString() de cada um atualizado
-
- 
 }
