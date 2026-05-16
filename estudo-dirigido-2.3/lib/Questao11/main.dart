@@ -1,55 +1,60 @@
+import 'personagem.dart';
 import 'Guerreiro.dart';
 import 'arqueiro.dart';
 import 'mago.dart';
 import 'globin.dart';
 import 'dragao.dart';
-//Programa principal
-//No programa principal, crie pelo menos um objeto de cada uma das seguintes classes: Guerreiro, Arqueiro, Mago, Goblin e Dragao.
-//Use os seguintes personagens:
-//• Thoran, o guerreiro.
-//• Lia, a arqueira.
-//• Merlin, o mago.
-//• Gob, o goblin.
-//• Ignis, o dragão.
-//Depois, execute a seguinte sequência de ações:
-//• O guerreiro deve atacar o goblin.
-//• O arqueiro deve atacar o goblin.
-//• O mago deve lançar magia no dragão.
-//• O dragão deve soltar fogo no guerreiro.
-//Ao final, exiba o status de todos os personagens. Se algum inimigo estiver derrotado, exiba também sua recompensa.
+import 'listaGenerica.dart';
 
 void main() {
-  var guerreiro = Guerreiro('Thoran', 100, 5, 20, 'Aço');
-  var arqueiro = Arqueiro('Lia', 80, 4, 15, 5);
-  var mago = Mago('Merlin', 70, 6, 18, 30);
+  var guerreiro = Guerreiro('Thoran', 120, 5, 20, 'Armadura 15');
+  var arqueiro = Arqueiro('Lia ', 80, 4, 15, 10);
+  var mago = Mago('Merlin', 70, 6, 10, 50);
+  var goblin = Globin('Gob', 40, 2, 100, 25);
+  var dragao = Dragao('Ignis', 200, 10, 1000, 35);
 
-  var goblin = Globin('Gob', 50, 2, 100, 30);
-  var dragao = Dragao('Ignis', 300, 10, 1000, 50);
+  var combatentes = ListaGenerica<Atacavel>();
 
-  // Ações
-  guerreiro.atacar(goblin);
-  arqueiro.atacar(goblin);
-  mago.magia(dragao);
-  dragao.chamas(guerreiro);
+  combatentes.adicionar(guerreiro);
+  combatentes.adicionar(arqueiro);
 
-  print('\n=== STATUS FINAL ===\n');
+  var magos = ListaGenerica<Magico>();
 
-  guerreiro.exibirStatus();
-  print('');
-  arqueiro.exibirStatus();
-  print('');
-  mago.exibirStatus();
-  print('');
-  goblin.exibirStatus();
-  print('');
-  dragao.exibirStatus();
+  magos.adicionar(mago);
 
+  var flamejante = ListaGenerica<Flamejante>();
 
-  if (!goblin.estaVivo()) {
-    goblin.exibirRecompensa();
+  flamejante.adicionar(dragao);
+  flamejante.imprimirItens();
+
+  var personagem = ListaGenerica<Personagem>();
+
+  personagem.adicionar(guerreiro);
+  personagem.adicionar(arqueiro);
+  personagem.adicionar(mago);
+  personagem.adicionar(goblin);
+  personagem.adicionar(dragao);
+
+  personagem.imprimirItens();
+
+  print('\n=== Atacando ===');
+  for (var c in combatentes.obterItens()) {
+    c.atacar(goblin); 
   }
 
-  if (!dragao.estaVivo()) {
-    dragao.exibirRecompensa();
+  print('\n=== Magia ===');
+  for (var m in magos.obterItens()) {
+    m.magia(dragao); 
   }
+
+  print('\n=== Fogo ===');
+  for (var f in flamejante.obterItens()) {
+    f.chamas(guerreiro); 
+  }
+
+  // Estado final
+  print('\n=== Estado final ===');
+  personagem.imprimirItens(); // toString() de cada um atualizado
+
+ 
 }

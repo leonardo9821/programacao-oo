@@ -37,22 +37,22 @@ void main() {
     70.00,
   );
 
-  // Lista genérica
+  
   var lista = ListaGenerica<Calculavel>();
 
-  // Adicionando na lista
+
   lista.adicionar(ingresso1);
   lista.adicionar(ingresso2);
   lista.adicionar(ingresso3);
   lista.adicionar(ingresso4);
   lista.adicionar(ingresso5);
 
-  // Imprime itens
+  
   lista.imprimirItens();
 
   print('\n=== VALORES FINAIS ===');
 
-  // Polimorfismo
+
   for (var ingresso in lista.itens) {
     print('Valor final: R\$ ${ingresso.valorFinal()}');
   }
