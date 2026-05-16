@@ -1,4 +1,3 @@
-//No main(), crie uma conta poupança e uma conta corrente. Deposite valores, aplique rendimento e exiba o saldo final.
 import 'ContaCorrente.dart';
 import 'ContaPouponca.dart';
 

@@ -1,5 +1,3 @@
-//Crie uma classe ContaBancaria com os atributos titular e saldo, além dos métodos depositar(double valor), sacar(double valor) e exibirSaldo().
-
 class ContaBancaria{
   String titular;
   double _saldo = 0.0;
@@ -28,7 +26,6 @@ class ContaBancaria{
     print("Titular: $titular | Saldo Atual: R\$ ${_saldo.toStringAsFixed(2)}");
   }
 
-  // Getter
   double get saldo => _saldo;
 
   // Setter protegido
@@ -44,7 +41,6 @@ class ContaBancaria{
   }
 }
 
-//Depois, crie uma interface chamada Rentavel, com o método aplicarRendimento().
 abstract class Rentavel {
   void aplicarRendimento();
 }
