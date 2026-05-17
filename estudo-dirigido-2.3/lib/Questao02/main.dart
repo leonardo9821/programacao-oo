@@ -1,5 +1,5 @@
-import 'ProdutoPerecivel.dart';
 import 'produtoEletronico.dart';
+import 'produtoPerecivel.dart';
 import 'listaGenerica.dart';
 import 'produto.dart';
 
