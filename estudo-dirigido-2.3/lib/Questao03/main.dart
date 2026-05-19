@@ -1,4 +1,3 @@
-import '../../../Estudo-dirigido-2.1/lib/Questao03/veiculo.dart';
 import 'carro.dart';
 import 'moto.dart';
 import 'caminhao.dart';

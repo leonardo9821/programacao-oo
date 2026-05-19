@@ -7,27 +7,27 @@ import 'dragao.dart';
 import 'listaGenerica.dart';
 
 void main() {
-  var guerreiro = Guerreiro('Thoran', 120, 5, 20, 'Armadura 15');
-  var arqueiro = Arqueiro('Lia ', 80, 4, 15, 10);
-  var mago = Mago('Merlin', 70, 6, 10, 50);
-  var goblin = Globin('Gob', 40, 2, 100, 25);
-  var dragao = Dragao('Ignis', 200, 10, 1000, 35);
+  Guerreiro guerreiro = Guerreiro('Thoran', 120, 5, 20, 'Armadura 15');
+  Arqueiro arqueiro = Arqueiro('Lia ', 80, 4, 15, 10);
+  Mago mago = Mago('Merlin', 70, 6, 10, 50);
+  Globin goblin = Globin('Gob', 40, 2, 100, 25);
+  Dragao dragao = Dragao('Ignis', 200, 10, 1000, 35);
 
-  var combatentes = ListaGenerica<Atacavel>();
+  ListaGenerica combatentes = ListaGenerica<Atacavel>();
 
   combatentes.adicionar(guerreiro);
   combatentes.adicionar(arqueiro);
 
-  var magos = ListaGenerica<Magico>();
+  ListaGenerica magos = ListaGenerica<Magico>();
 
   magos.adicionar(mago);
 
-  var flamejante = ListaGenerica<Flamejante>();
+  ListaGenerica flamejante = ListaGenerica<Flamejante>();
 
   flamejante.adicionar(dragao);
   flamejante.imprimirItens();
 
-  var personagem = ListaGenerica<Personagem>();
+  ListaGenerica personagem = ListaGenerica<Personagem>();
 
   personagem.adicionar(guerreiro);
   personagem.adicionar(arqueiro);
